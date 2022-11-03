@@ -1,2 +1,2 @@
-a, b = map(int, input().split('-'))
+a, b = input().split('-')
 print(a, b, sep = '')
