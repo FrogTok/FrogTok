@@ -25,7 +25,7 @@ def bfs(matrix, n, m):
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
-            if(nx >= 0 and ny >=0 and nx < n and ny < m):
+            if(nx >= 0 and ny >= 0 and nx < n and ny < m):
                 if (matrix[nx][ny] == 1):
                     queue.append((nx, ny, move + 1))
         
