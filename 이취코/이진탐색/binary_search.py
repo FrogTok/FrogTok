@@ -13,7 +13,7 @@ def binary_search_recursive(array, target, start, end):
         return binary_search_recursive(array, target, mid + 1, end)
 
 # 반복문을 이용한 이진탐색
-def binary_search_sequential(array, target, start, end):
+def binary_search_loop(array, target, start, end):
     while start <= end:
         mid = (start + end) // 2
         if (target == array[mid]):
