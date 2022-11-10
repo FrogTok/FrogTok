@@ -1,3 +1,5 @@
+# 탐색 범위가 2000만이 넘어가면, 이진탐색을 고려해보자.
+
 # 재귀함수를 이용한 이진탐색
 def binary_search_recursive(array, target, start, end):
     if (start > end):
