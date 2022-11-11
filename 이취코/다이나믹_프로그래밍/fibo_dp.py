@@ -1,4 +1,4 @@
-# 메모이제이션 기법 활용
+# 탑다운 기법 활용
 
 d = [0] * 100
 
@@ -14,3 +14,19 @@ def fibo(n):
     return d[n]
 
 print(fibo(99))
+
+
+# 바텀업 기법 활용
+
+d = [0] * 100
+
+d[1] = 1
+d[2] = 1
+
+goal = 99
+
+for i in range(goal + 1):
+    if (d[i] == 0):
+        d[i] = d[i - 1] + d[i - 2]
+
+print(fibo(99)) 
