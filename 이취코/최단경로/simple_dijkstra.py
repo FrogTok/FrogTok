@@ -59,8 +59,10 @@ def dijkstra(start):
     # 시작 노드에 대해서 초기화
     distance[start] = 0
     visited[start] = True
+
     for j in graph[start]:
         distance[j[0]] = j[1]
+        
     # 시작 노드를 제외한 전체 n - 1개의 노드에 대해 반복
     for i in range(n - 1):
         # 현재 최단거리가 가장 짧은 노드를 꺼내서, 방문 처리
