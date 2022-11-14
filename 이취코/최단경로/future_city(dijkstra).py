@@ -46,12 +46,19 @@ def dijkstra(start, end):
     heapq.heappush(q, (0, start))
 
     while q:
+        print(q)
         d, node = heapq.heappop(q)
         for next in graph[node]:
             if (not visited[next]):
                 distance[next] = min(distance[next], d + 1)
                 visited[next] = True
                 heapq.heappush(q, (distance[next], next))
+            
+            if (next == end):
+                q.clear()
+                print("queue clear")
+                break
+                
     print(start, " to ", end, " = ", distance[end])
     return distance[end]
 
