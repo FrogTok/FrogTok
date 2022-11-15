@@ -14,16 +14,15 @@ n, m = map(int, input().split())
 # i의 부모노드 값 저장
 parents = [ i for i in range(n + 1)]
 
-def find_root(parent, node):
-    while parent != node:
-        node = parent
-        parent = parents[parent]
+def find_root(node):
+    while parents[node] != node:
+        node = parents[node]
     return node
 
 for _ in range(m):
     n1, n2 = map(int, input().split())
-    root_n1 = find_root(parents[n1], n1)
-    root_n2 = find_root(parents[n2], n2)
+    root_n1 = find_root(n1)
+    root_n2 = find_root(n2)
 
     if (root_n1 < root_n2):
         parents[root_n2] =root_n1
