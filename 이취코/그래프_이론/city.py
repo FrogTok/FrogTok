@@ -33,10 +33,8 @@ def union(parents, a, b):
 
     if (root_a < root_b):
         parents[root_b] = root_a
-        return root_b
     else:
         parents[root_a] = root_b
-        return root_a
 
 input = sys.stdin.readline
 
@@ -44,7 +42,8 @@ n, m = map(int, input().split())
 
 q = []
 parents = [i for i in range(n + 1)]
-costs = [0] * (n + 1)
+sum = 0
+last = 0
 
 for _ in range(m):
     a, b, cost = map(int, input().split())
@@ -56,7 +55,9 @@ while q:
     if (find_root(parents, a) == find_root(parents, b)):
         continue
     
-    result = union(parents, a, b)
-    costs[result] = c
+    union(parents, a, b)
+    sum += c
+    last = c
 
-print(sum(costs) - max(costs))
+
+print(sum - last)
