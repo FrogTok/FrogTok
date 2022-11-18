@@ -4,10 +4,12 @@ coins = list(map(int, input().split()))
 
 coins.sort()
 
-target = 0
+target = 1
 for coin in coins:
-    if (coin <= target + 1):
+    if (coin <= target):
         target += coin
     else:
-        print(target + 1)
         break
+
+print(target)
+
