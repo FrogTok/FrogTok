@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/1439
 s = input()
 
 # 처음에 나오는 수가 무조건 더 많거나 같다.
