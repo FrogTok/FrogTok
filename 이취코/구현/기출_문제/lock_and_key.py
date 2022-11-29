@@ -1,4 +1,4 @@
-#https://school.programmers.co.kr/learn/courses/30/lessons/60059
+# https://school.programmers.co.kr/learn/courses/30/lessons/60059
 
 def spin(key, m):
     new = [[0] * m for _ in range(m)]

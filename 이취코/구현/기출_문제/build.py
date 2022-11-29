@@ -1,3 +1,4 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/60061
 def possible(answer):    
         for structure in answer:
             x, y, a = structure
